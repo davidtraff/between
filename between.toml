@@ -1,0 +1,7 @@
+# between.toml
+# Example configuration for between
+
+[network]
+ws_address = "0.0.0.0:8000"
+proxy_listen_address = "0.0.0.0:8081"
+proxy_connect_address = "127.0.0.1:8080"
