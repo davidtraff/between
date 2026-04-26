@@ -60,7 +60,6 @@ async fn main() -> Result<()> {
     let cfg = config::AppConfig::load()?;
     let (tx, _) = channel(1024);
 
-    // WebSocket listener
     let ws_listener = TcpListener::bind(&cfg.network.ws_address).await?;
 
     let ws_task = ws::run_ws(ws_listener, tx.clone());
